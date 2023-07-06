@@ -1,0 +1,62 @@
+@import './../../colors'
+  
+$height: 8vw
+$width: 4%
+$margin-between-rectangles: $width - 1.2%
+
+.body 
+  position: relative
+  display: flex
+  margin: 8vw auto 3vw auto
+
+.rectangle
+  width: $width
+  height: $height
+  margin-left: $margin-between-rectangles
+  transform: skewX(-45deg)
+  @media screen and (orientation: portrait)
+    height: $height + 6vw
+    width: $width + 8%
+
+.first
+  margin-left: -$width / 2.7
+  @media screen and (orientation: portrait)
+    margin-left: -$width / 1.5
+
+.mainRectangle
+  width: 20%
+  height: $height
+  margin-left: $margin-between-rectangles
+  transform: skewX(-45deg)
+  @media screen and (orientation: portrait)
+    width: 40%
+    height: $height + 6vw
+
+.rectangleFillsExcess
+  width: 100%
+  height: $height
+  margin-left: -5%
+  @media screen and (orientation: portrait)
+    height: $height + 6vw
+    margin-left: -10%
+
+.headerText
+  position: absolute
+  display: flex
+  align-items: center
+  left: 20%
+  height: 100%
+  font-size: 4vw
+  color: $background-color
+  @media screen and (orientation: portrait)
+    left: 35%
+    font-size: 6vw
+
+.a
+  background-color: $basic
+
+.b
+  background-color: $second-basic
+
+.c
+  background-color: $third-basic
